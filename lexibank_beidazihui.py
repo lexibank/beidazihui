@@ -47,14 +47,15 @@ class Dataset(BaseDataset):
         # add concepts
         concepts_dict = {}
         for concept in self.concepts:
-            args.writer.add_concept(
-                ID="_".join([concept["NUMBER"], slug(concept["ENGLISH"])]),
-                Name=concept["ENGLISH"],
-                Concepticon_ID=concept["CONCEPTICON_ID"],
-                Concepticon_Gloss=concept["CONCEPTICON_GLOSS"],
-                Chinese=concept["CHINESE"]
-            )
-            concepts_dict[concept["CHINESE"]] = "_".join([concept["NUMBER"], slug(concept["ENGLISH"])])
+            if concept["ENGLISH"]:
+                args.writer.add_concept(
+                    ID="_".join([concept["NUMBER"], slug(concept["ENGLISH"])]),
+                    Name=concept["ENGLISH"],
+                    Concepticon_ID=concept["CONCEPTICON_ID"],
+                    Concepticon_Gloss=concept["CONCEPTICON_GLOSS"],
+                    Chinese=concept["CHINESE"]
+                )
+                concepts_dict[concept["CHINESE"]] = "_".join([concept["NUMBER"], slug(concept["ENGLISH"])])
         # add languages
         languages = args.writer.add_languages(lookup_factory="Name")
         # add forms
