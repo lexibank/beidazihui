@@ -17,18 +17,18 @@ This dataset, which is well-known among Sinologists, comprises 18 dialect variet
 ## Statistics
 
 
-![Glottolog: 96%](https://img.shields.io/badge/Glottolog-96%25-green.svg "Glottolog: 96%")
-![Concepticon: 20%](https://img.shields.io/badge/Concepticon-20%25-red.svg "Concepticon: 20%")
+![Glottolog: 95%](https://img.shields.io/badge/Glottolog-95%25-green.svg "Glottolog: 95%")
+![Concepticon: 98%](https://img.shields.io/badge/Concepticon-98%25-green.svg "Concepticon: 98%")
 ![Source: 100%](https://img.shields.io/badge/Source-100%25-brightgreen.svg "Source: 100%")
 ![BIPA: 100%](https://img.shields.io/badge/BIPA-100%25-brightgreen.svg "BIPA: 100%")
 ![CLTS SoundClass: 100%](https://img.shields.io/badge/CLTS%20SoundClass-100%25-brightgreen.svg "CLTS SoundClass: 100%")
 
 - **Varieties:** 19
-- **Concepts:** 2,610
-- **Lexemes:** 52,555
+- **Concepts:** 518
+- **Lexemes:** 10,782
 - **Sources:** 1
-- **Synonymy:** 1.08
+- **Synonymy:** 1.11
 - **Invalid lexemes:** 0
-- **Tokens:** 187,025
-- **Segments:** 169 (0 BIPA errors, 0 CTLS sound class errors, 169 CLTS modified)
-- **Inventory size (avg):** 50.42
+- **Tokens:** 37,508
+- **Segments:** 164 (0 BIPA errors, 0 CTLS sound class errors, 164 CLTS modified)
+- **Inventory size (avg):** 47.84
