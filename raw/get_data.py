@@ -1,8 +1,12 @@
+import sys
 from lingpy import *
 from collections import defaultdict
-from pyclts.transcriptionsystem import TranscriptionSystem
+#from pyclts.transcriptionsystem import TranscriptionSystem
+from pyclts import CLTS
 
-bipa = TranscriptionSystem('bipa')
+clts = CLTS(sys.argv[1])
+
+bipa = clts.transcriptionsystem('bipa')
 
 data = csv2list('characters.tsv')
 
@@ -30,7 +34,7 @@ reps = {
         "e": "e",
         "ei": "ei",
         "eu": "eu",
-        "eːŋ": "eːŋ",
+        #"eːŋ": "eːŋ",
         "i": "i",
         "ia": "i/j a",
         "iai": "i/j ai",
@@ -152,7 +156,7 @@ for i, line in enumerate(data[1:]):
                 vowel = False
             ntk += [t]
     print(' '.join(ntk))
-    
+
 
     tokens = ' '.join([reps.get(x, x) for x in ntk]).split()
     for j, t in enumerate(tokens):
@@ -166,7 +170,7 @@ for i, line in enumerate(data[1:]):
                 pre = ''
             tokens[j] = pre+s.s
 
-    D[i+1] = [line[2], line[0], line[3], line[3], 
+    D[i+1] = [line[2], line[0], line[3], line[3],
             tokens]
 input()
 for bip in bips:

@@ -10,12 +10,11 @@ Available online at https://github.com/digling/cddb/
 
 ## Notes
 
-This dataset, which is well-known among Sinologists, comprises 18 dialect varieties, collected during the 1950s and was digitized during 2012 and 2016. We offer the data in morpheme-segmented form, with a slightly adjusted IPA transcription.
+This dataset, which is well-known among Sinologists, comprises 18 dialect varieties and the Chinese readings of the Zhōngyuán Yīnyùn for more than 2000 characters. The digital version stems from the DOC project, which was later offered digitally by the Tower of Babel project. Of these characters, some 400 were selected, of which I think they could be interesting to study the influence of Chinese dialect varieties on other languages in South-East Asia. Since we are dealing with character readings, the list should not be taken for phylogenetic reconstruction in Swadesh-list style.  
 
 
 
 ## Statistics
-
 
 
 ![Glottolog: 95%](https://img.shields.io/badge/Glottolog-95%25-green.svg "Glottolog: 95%")
