@@ -8,28 +8,36 @@ This dataset is licensed under a GPL-3.0 license
 
 Available online at https://github.com/digling/cddb/
 
+
+Conceptlists in Concepticon:
+- [BeijingDaxue-1964-905](https://concepticon.clld.org/contributions/BeijingDaxue-1964-905)
 ## Notes
 
-This dataset, which is well-known among Sinologists, comprises 18 dialect varieties, collected during the 1950s and was digitized during 2012 and 2016. We offer the data in morpheme-segmented form, with a slightly adjusted IPA transcription.
+This dataset, which is well-known among Sinologists, comprises 18 dialect varieties and the Chinese readings of the Zhōngyuán Yīnyùn for more than 2000 characters. The digital version stems from the DOC project, which was later offered digitally by the Tower of Babel project. Of these characters, some 400 were selected, of which I think they could be interesting to study the influence of Chinese dialect varieties on other languages in South-East Asia. Since we are dealing with character readings, the list should not be taken for phylogenetic reconstruction in Swadesh-list style.  
 
 
 
 ## Statistics
 
 
-
-![Glottolog: 95%](https://img.shields.io/badge/Glottolog-95%25-green.svg "Glottolog: 95%")
-![Concepticon: 98%](https://img.shields.io/badge/Concepticon-98%25-green.svg "Concepticon: 98%")
-![Source: 100%](https://img.shields.io/badge/Source-100%25-brightgreen.svg "Source: 100%")
+![Glottolog: 96%](https://img.shields.io/badge/Glottolog-96%25-green.svg "Glottolog: 96%")
+![Concepticon: 88%](https://img.shields.io/badge/Concepticon-88%25-yellowgreen.svg "Concepticon: 88%")
+![Source: 0%](https://img.shields.io/badge/Source-0%25-red.svg "Source: 0%")
 ![BIPA: 100%](https://img.shields.io/badge/BIPA-100%25-brightgreen.svg "BIPA: 100%")
 ![CLTS SoundClass: 100%](https://img.shields.io/badge/CLTS%20SoundClass-100%25-brightgreen.svg "CLTS SoundClass: 100%")
 
 - **Varieties:** 19
-- **Concepts:** 518
-- **Lexemes:** 10,782
-- **Sources:** 1
-- **Synonymy:** 1.11
+- **Concepts:** 259
+- **Lexemes:** 5,580
+- **Sources:** 0
+- **Synonymy:** 1.15
 - **Invalid lexemes:** 0
-- **Tokens:** 37,508
-- **Segments:** 164 (0 BIPA errors, 0 CTLS sound class errors, 164 CLTS modified)
-- **Inventory size (avg):** 47.84
+- **Tokens:** 19,776
+- **Segments:** 159 (0 BIPA errors, 0 CTLS sound class errors, 159 CLTS modified)
+- **Inventory size (avg):** 46.95
+
+## Possible Improvements:
+
+
+
+- Entries missing sources: 5580/5580 (100.00%)
