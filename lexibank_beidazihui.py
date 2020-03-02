@@ -50,7 +50,7 @@ class Dataset(BaseDataset):
             if concept["ENGLISH"]:
                 args.writer.add_concept(
                     ID="_".join([concept["NUMBER"], slug(concept["ENGLISH"])]),
-                    Name=concept["ENGLISH"],
+                    Name=concept["ENGLISH"].replace(',',';'),
                     Concepticon_ID=concept["CONCEPTICON_ID"],
                     Concepticon_Gloss=concept["CONCEPTICON_GLOSS"],
                     Chinese=concept["CHINESE"]
