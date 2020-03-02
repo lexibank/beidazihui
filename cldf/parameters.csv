@@ -27,8 +27,8 @@ ID,Name,Concepticon_ID,Concepticon_Gloss,Chinese
 26_dog,dog,2009,DOG,犬
 27_down,down,1485,BELOW OR UNDER,下
 28_dry,dry,1398,DRY,干
-29_earthground,"earth, ground",2159,GROUND,地
-30_earthsoil,"earth, soil",1228,EARTH (SOIL),土
+29_earthground,earth; ground,2159,GROUND,地
+30_earthsoil,earth; soil,1228,EARTH (SOIL),土
 31_winter,winter,1471,WINTER,冬
 32_east,east,1877,EAST,東
 33_eat,eat,1336,EAT,吃
@@ -81,7 +81,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss,Chinese
 80_lose,lose,1660,LOSE,失
 81_maleperson,male person,2106,MALE PERSON,男
 82_marryawoman,marry (a woman),2164,MARRY (AS MAN),娶
-83_middlecenter,"middle, center",1093,MIDDLE,中
+83_middlecenter,middle; center,1093,MIDDLE,中
 84_moon,moon,1313,MOON,月
 85_mother,mother,1216,MOTHER,母
 86_mountain,mountain,639,MOUNTAIN,山
@@ -135,7 +135,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss,Chinese
 134_use,use,2072,USE (VERB),用
 135_village,village,930,VILLAGE,村
 136_wash,wash,1453,WASH,洗
-137_watchlook,"watch, look",1819,LOOK,看
+137_watchlook,watch; look,1819,LOOK,看
 138_week,week,1469,WEEK,周
 139_well,well,954,WELL,井
 140_west,west,1817,WEST,西
@@ -240,7 +240,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss,Chinese
 239_column,column,2045,COLUMN,柱
 240_comb,comb,1475,COMB,梳
 241_combofcock,comb of cock,188,COMB OF BIRD,冠
-242_congeegruelporridge,"congee (gruel, porridge)",2049,CONGEE,粥
+242_congeegruelporridge,congee (gruel; porridge),2049,CONGEE,粥
 243_connectjoin,connect (join),2862,CONNECT,接
 244_cookboil,cook (boil),1100,COOK (SOMETHING),煮
 245_cooked,cooked,269,COOKED,熟
