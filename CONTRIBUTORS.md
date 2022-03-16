@@ -1,5 +1,6 @@
 # Contributors
 
-Name | GitHub user | Role
---- | --- | ---
-Johann-Mattis List | @LinguList | maintainer
+Name | GitHub user | Description | Role
+--- | --- | --- | ---
+Beijing University | | original data | Author
+Johann-Mattis List | @LinguList | maintainer | Other

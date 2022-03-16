@@ -7,10 +7,15 @@
     ],
     "creators": [
         {
-            "name": "Johann-Mattis List"
+            "name": "Beijing University"
         }
     ],
-    "contributors": [],
+    "contributors": [
+        {
+            "name": "Johann-Mattis List",
+            "type": "Other"
+        }
+    ],
     "communities": [
         {
             "identifier": "lexibank"
