@@ -3,27 +3,58 @@
     "aboutUrl": null,
     "dc:bibliographicCitation": "B\u011bij\u012bng D\u00e0xu\u00e9 \u5317\u4eac\u5927\u5b66 (1962): H\u00e0ny\u01d4 f\u0101ngy\u00e1n z\u00echu\u00ec \u6f22\u8a9e\u65b9\u97f3\u5b57\u5f59 [Chinese dialect character pronunciation list]. Beijing: Wenzi Gaige.",
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Wordlist",
-    "dc:description": null,
     "dc:identifier": "https://github.com/digling/cddb/",
     "dc:isVersionOf": null,
-    "dc:license": "http://www.opensource.org/licenses/GPL-3.0",
+    "dc:license": "https://creativecommons.org/licenses/by/4.0/",
     "dc:related": null,
     "dc:source": "sources.bib",
-    "dc:title": "Chinese Character Pronunciations",
+    "dc:title": "CLDF dataset derived from Beijing Daxue's \"Chinese Character Pronunciations\" from 1962",
+    "dcat:accessURL": "https://github.com/lexibank/beidazihui",
+    "prov:wasDerivedFrom": [
+        {
+            "rdf:about": "https://github.com/lexibank/beidazihui",
+            "rdf:type": "prov:Entity",
+            "dc:created": "8b6338d",
+            "dc:title": "Repository"
+        },
+        {
+            "rdf:about": "https://github.com/glottolog/glottolog",
+            "rdf:type": "prov:Entity",
+            "dc:created": "v4.5",
+            "dc:title": "Glottolog"
+        },
+        {
+            "rdf:about": "https://github.com/concepticon/concepticon-data",
+            "rdf:type": "prov:Entity",
+            "dc:created": "v2.5.0",
+            "dc:title": "Concepticon"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-clts/clts/",
+            "rdf:type": "prov:Entity",
+            "dc:created": "v2.1.0-26-gb12a7df",
+            "dc:title": "CLTS"
+        }
+    ],
+    "prov:wasGeneratedBy": [
+        {
+            "dc:title": "lingpy-rcParams",
+            "dc:relation": "lingpy-rcParams.json"
+        },
+        {
+            "dc:title": "python",
+            "dc:description": "3.9.9"
+        },
+        {
+            "dc:title": "python-packages",
+            "dc:relation": "requirements.txt"
+        }
+    ],
     "rdf:ID": "beidazihui",
     "rdf:type": "http://www.w3.org/ns/dcat#Distribution",
     "dialect": {
         "commentPrefix": null
     },
-    "notes": [
-        {
-            "dc:title": "environment",
-            "properties": {
-                "glottolog_version": "v4.0",
-                "concepticon_version": "v2.1.0"
-            }
-        }
-    ],
     "tables": [
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FormTable",
@@ -88,6 +119,18 @@
                     {
                         "datatype": "boolean",
                         "name": "Loan"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Graphemes"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Profile"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Partial_Cognacy"
                     }
                 ],
                 "foreignKeys": [
@@ -158,8 +201,8 @@
                     {
                         "datatype": {
                             "base": "decimal",
-                            "minimum": -90,
-                            "maximum": 90
+                            "minimum": "-90",
+                            "maximum": "90"
                         },
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#latitude",
                         "required": false,
@@ -168,8 +211,8 @@
                     {
                         "datatype": {
                             "base": "decimal",
-                            "minimum": -180,
-                            "maximum": 180
+                            "minimum": "-180",
+                            "maximum": "180"
                         },
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#longitude",
                         "required": false,
@@ -233,80 +276,6 @@
                 ]
             },
             "url": "parameters.csv"
-        },
-        {
-            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CognateTable",
-            "dc:extent": 0,
-            "tableSchema": {
-                "columns": [
-                    {
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
-                        "name": "ID"
-                    },
-                    {
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#formReference",
-                        "name": "Form_ID"
-                    },
-                    {
-                        "datatype": "string",
-                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit",
-                        "name": "Form"
-                    },
-                    {
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference",
-                        "name": "Cognateset_ID"
-                    },
-                    {
-                        "datatype": "boolean",
-                        "name": "Doubt"
-                    },
-                    {
-                        "datatype": "string",
-                        "default": "expert",
-                        "name": "Cognate_Detection_Method"
-                    },
-                    {
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
-                        "separator": ";",
-                        "name": "Source"
-                    },
-                    {
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment",
-                        "separator": " ",
-                        "name": "Alignment"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Alignment_Method"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Alignment_Source"
-                    }
-                ],
-                "foreignKeys": [
-                    {
-                        "columnReference": [
-                            "Form_ID"
-                        ],
-                        "reference": {
-                            "resource": "forms.csv",
-                            "columnReference": [
-                                "ID"
-                            ]
-                        }
-                    }
-                ],
-                "primaryKey": [
-                    "ID"
-                ]
-            },
-            "url": "cognates.csv"
         }
     ]
 }

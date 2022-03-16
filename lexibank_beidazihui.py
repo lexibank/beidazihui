@@ -4,8 +4,8 @@ from clldutils.path import Path
 from clldutils.text import strip_chars, split_text_with_context
 from clldutils.misc import lazyproperty
 from lingpy.sequence.sound_classes import syllabify
-from pylexibank.dataset import Concept, Language
-from pylexibank.dataset import NonSplittingDataset as BaseDataset
+from pylexibank.models import Concept, Language, Lexeme
+from pylexibank.dataset import Dataset as BaseDataset
 from pylexibank.util import pb, getEvoBibAsBibtex
 
 @attr.s
@@ -21,42 +21,51 @@ class HLanguage(Language):
     Family = attr.ib(default='Sino-Tibetan')
     DialectGroup = attr.ib(default=None)
 
+
+@attr.s
+class CustomLexeme(Lexeme):
+    Partial_Cognacy = attr.ib(default=None)
+
+
 class Dataset(BaseDataset):
     dir = Path(__file__).parent
     id = "beidazihui"
     concept_class = BDConcept
+    lexeme_class = CustomLexeme
     language_class = HLanguage
 
     def cmd_download(self, **kw):
         self.raw.write("sources.bib", getEvoBibAsBibtex("Zihui", **kw))
 
-    def cmd_install(self, **kw):
-        wl = lingpy.Wordlist(self.raw.posix("wordlist.tsv"))
+    def cmd_makecldf(self, args):
+        wl = lingpy.Wordlist(self.raw_dir.joinpath("wordlist.tsv").as_posix())
+        
+        args.writer.add_sources()
 
-        with self.cldf as ds:
-            ds.add_sources(*self.raw.read_bib())
-            concepts = {}
-            for concept in self.concepts:
-                if concept['ENGLISH']:
-                    ds.add_concept(
-                            ID=concept['NUMBER'],
-                            Name=concept['ENGLISH'],
-                            Chinese=concept['CHINESE'],
-                            Concepticon_ID=concept['CONCEPTICON_ID'],
-                            Concepticon_Gloss=concept['CONCEPTICON_GLOSS']
-                            )
-                    concepts[concept['CHINESE']] = concept['NUMBER']
+        concepts = {}
+        for concept in self.concepts:
+            if concept['ENGLISH']:
+                args.writer.add_concept(
+                        ID=concept['NUMBER'],
+                        Name=concept['ENGLISH'],
+                        Chinese=concept['CHINESE'],
+                        Concepticon_ID=concept['CONCEPTICON_ID'],
+                        Concepticon_Gloss=concept['CONCEPTICON_GLOSS']
+                        )
+                concepts[concept['CHINESE']] = concept['NUMBER']
 
-            langs = {k['Name']: k['ID'] for k in self.languages}
-            ds.add_languages()
-
-            for k in pb(wl, desc="wl-to-cldf", total=len(wl)):
-                if wl[k, "value"] and wl[k, 'concept'] in concepts:
-                    ds.add_form_with_segments(
-                        Language_ID=langs[wl[k, "doculect"]],
-                        Parameter_ID=concepts[wl[k, 'concept']],
-                        Value=wl[k, "value"],
-                        Form=wl[k, "form"],
-                        Segments=wl[k, 'tokens'],
-                        Source="Zihui",
-                    )
+        langs = args.writer.add_languages(lookup_factory="Name")
+        
+        cogidx = 1
+        for k in pb(wl, desc="wl-to-cldf", total=len(wl)):
+            if wl[k, "value"] and wl[k, 'concept'] in concepts:
+                args.writer.add_form_with_segments(
+                    Language_ID=langs[wl[k, "doculect"]],
+                    Parameter_ID=concepts[wl[k, 'concept']],
+                    Value=wl[k, "value"],
+                    Form=wl[k, "form"],
+                    Segments=wl[k, 'tokens'],
+                    Source="Zihui",
+                    Partial_Cognacy=str(cogidx)
+                )
+                cogidx += 1

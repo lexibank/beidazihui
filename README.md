@@ -1,21 +1,26 @@
-# Chinese Character Pronunciations
+# CLDF dataset derived from Beijing Daxue's "Chinese Character Pronunciations" from 1962
 
-Cite the source dataset as
+## How to cite
 
-> Běijīng Dàxué 北京大学 (1962): Hànyǔ fāngyán zìhuì 漢語方音字彙 [Chinese dialect character pronunciation list]. Beijing: Wenzi Gaige.
+If you use these data please cite
+- the original source
+  > Běijīng Dàxué 北京大学 (1962): Hànyǔ fāngyán zìhuì 漢語方音字彙 [Chinese dialect character pronunciation list]. Beijing: Wenzi Gaige.
+- the derived dataset using the DOI of the [particular released version](../../releases/) you were using
 
-This dataset is licensed under a GPL-3.0 license
+## Description
+
+
+This dataset is licensed under a CC-BY-4.0 license
 
 Available online at https://github.com/digling/cddb/
 
 ## Notes
 
-This dataset, which is well-known among Sinologists, comprises 18 dialect varieties, collected during the 1950s and was digitized during 2012 and 2016. We offer the data in morpheme-segmented form, with a slightly adjusted IPA transcription.
+This dataset, which is well-known among Sinologists, comprises 18 dialect varieties and the Chinese readings of the Zhōngyuán Yīnyùn for more than 2000 characters. The digital version stems from the DOC project, which was later offered digitally by the Tower of Babel project. Of these characters, some 400 were selected, of which I think they could be interesting to study the influence of Chinese dialect varieties on other languages in South-East Asia. Since we are dealing with character readings, the list should not be taken for phylogenetic reconstruction in Swadesh-list style.  
 
 
 
 ## Statistics
-
 
 
 ![Glottolog: 95%](https://img.shields.io/badge/Glottolog-95%25-green.svg "Glottolog: 95%")
@@ -33,3 +38,18 @@ This dataset, which is well-known among Sinologists, comprises 18 dialect variet
 - **Tokens:** 37,508
 - **Segments:** 164 (0 BIPA errors, 0 CTLS sound class errors, 164 CLTS modified)
 - **Inventory size (avg):** 47.84
+
+# Contributors
+
+Name | GitHub user | Role
+--- | --- | ---
+Johann-Mattis List | @LinguList | maintainer
+
+
+
+
+## CLDF Datasets
+
+The following CLDF datasets are available in [cldf](cldf):
+
+- CLDF [Wordlist](https://github.com/cldf/cldf/tree/master/modules/Wordlist) at [cldf/cldf-metadata.json](cldf/cldf-metadata.json)

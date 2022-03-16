@@ -1,0 +1,24 @@
+{
+    "title": "CLDF dataset derived from Beijing Daxue's \"Chinese Character Pronunciations\" from 1962",
+    "access_right": "open",
+    "keywords": [
+        "cldf:Wordlist",
+        "linguistics"
+    ],
+    "creators": [
+        {
+            "name": "Johann-Mattis List"
+        }
+    ],
+    "contributors": [],
+    "communities": [
+        {
+            "identifier": "lexibank"
+        }
+    ],
+    "upload_type": "dataset",
+    "description": "<p>Cite the source of the dataset as:</p>\n\n<blockquote>\n<p>B\u011bij\u012bng D\u00e0xu\u00e9 \u5317\u4eac\u5927\u5b66 (1962): H\u00e0ny\u01d4 f\u0101ngy\u00e1n z\u00echu\u00ec \u6f22\u8a9e\u65b9\u97f3\u5b57\u5f59 [Chinese dialect character pronunciation list]. Beijing: Wenzi Gaige.</p>\n</blockquote>",
+    "license": {
+        "id": "CC-BY-4.0"
+    }
+}

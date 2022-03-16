@@ -1,6 +1,6 @@
 {
     "url": "https://github.com/digling/cddb/",
     "citation": "Běijīng Dàxué 北京大学 (1962): Hànyǔ fāngyán zìhuì 漢語方音字彙 [Chinese dialect character pronunciation list]. Beijing: Wenzi Gaige.",
-    "license": "GPL-3.0",
-    "title": "Chinese Character Pronunciations"
+    "license": "CC-BY-4.0",
+    "title": "CLDF dataset derived from Beijing Daxue's \"Chinese Character Pronunciations\" from 1962"
 }
